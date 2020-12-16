@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Monoton');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.login-body .tile * {
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.login-body {
+    background-image: url('https://storage.googleapis.com/null_jeju/KakaoTalk_20201130_160705378.jpg');
+    color: #454749;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    min-height: 100vh;
+}
+.login-body .tile h1, .login-body .tile h2, .login-body .tile h3, .login-body .tile h4, .login-body .tile h5, .login-body .tile h6 {
+    font-family: Monoton, sans-serif;
+}
+
+/** * Tiles */
+.login-body .tile {
+    background-color: #fff;
+    border-radius: 0.1rem;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.2), 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    max-width: 24rem;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+.login-body .tile .tile-header {
+    /*background-image: url('https://storage.googleapis.com/null_jeju/KakaoTalk_20201130_160705378.jpg');*/
+    /*background: linear-gradient(to bottom, #FF9900, #fff);*/
+    background-color: #ffffff;
+    background-position: center;
+    background-size: cover;
+    height: 7rem;
+}
+.login-body .tile .tile-body {
+    padding: 2rem;
+}
+/** * Forms */
+.login-body .form-group {
+    display: block;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.login-body .form-group > .material-icons {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 2.7rem;
+}
+
+.login-body .form-group > .material-icons ~ input, .login-body .form-group > .material-icons ~ .label, .login-body .form-group > .material-icons ~ .underline {
+    margin-left: 2.25rem;
+    width: calc(100% - 2.25rem);
+}
+.login-body .form-group input {
+    border: none;
+    box-shadow: none;
+    padding-top: 1.5rem;
+    padding-right: 0;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    outline-style: none;
+    width: 100%;
+    text-indent: 2rem;
+}
+.login-body .form-group input ~ .label {
+    color: #868e96;
+    font-size: 1rem;
+    margin: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    transition: top 0.2s, font 0.2s;
+    z-index: 1;
+}
+.login-body .form-group input ~ .underline {
+    background-color: #FFBB00;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.login-body .form-group input:hover ~ .underline, .login-body .form-group input:focus ~ .underline {
+    background-color: #FFBB00;
+}
+.login-body .form-group input:hover ~ .label, .login-body .form-group input:focus ~ .label {
+    color: #FFBB00;
+}
+.login-body .form-group input:focus ~ .underline {
+    height: 2px;
+}
+.login-body .form-group input:focus ~ .label, .login-body .form-group input:valid ~ .label {
+    top: 0;
+    font-size: 0.85rem;
+}
+.login-body .form-group input:-webkit-autofill ~ .label {
+    top: 0;
+    font-size: 0.85rem;
+}
+/** * Buttons */
+.login-body .btn {
+    border-radius: 0.2rem;
+    display: inline-block;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    border: none;
+}
+.login-body .btn, [role="button"], [type="button"] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+}
+.login-body .btn-irenic {
+    background-color: #FFBB00;
+    color: white;
+}
+.login-body .btn-irenic:hover, .btn-irenic:focus, .btn-irenic:active {
+    background-color: #EDA900;
+}
+/** * Utilities */
+.login-body .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.login-body .float-right {
+    float: right;
+}
+/** * */
+.login-body .submit-container {
+    position: relative;
+}
+.login-body .submit-container #submit {
+    position: relative;
+    z-index: 2;
+    outline: none;
+    opacity: 1;
+    transition: transform 0.1s ease-in, opacity 0.1s ease-in, border-radius 0.1s ease-in;
+    right: -1px;
+}
+.login-body .submit-container #submit span {
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
+}
+.login-body .submit-container #submit.pending {
+    transform: scale(0.55, 1.5);
+    background-color: #FFBB00;
+    border-radius: 50%;
+    opacity: 1;
+}
+.login-body .submit-container #submit.pending span {
+    opacity: 0;
+}
+.login-body .submit-container #submit.pending ~ .login-pending {
+    opacity: 1;
+    transform: scale(1, 1);
+    z-index: 3;
+}
+.login-body .submit-container #submit.granted ~ .login-pending {
+    opacity: 1;
+    transform: translate(-9rem, -11rem) scale(18, 18);
+    z-index: 3;
+}
+.login-body .submit-container #submit.granted ~ .login-pending .spinner {
+    opacity: 0;
+}
+.login-body .submit-container #submit.granted ~ .login-pending .login-granted-content {
+    opacity: 1;
+}
+.login-body .submit-container .login-pending {
+    height: 3rem;
+    width: 3rem;
+    background-color: #07beb8;
+    position: absolute;
+    border-radius: 50%;
+    right: 1rem;
+    bottom: -0.5rem;
+    opacity: 0;
+    overflow: hidden;
+    transform: translate(0, 0) scale(0.5, 0.5);
+    transition: transform 0.2s ease-in, scale 0.2s ease-in;
+    z-index: 1;
+}
+.login-body .submit-container .login-pending .login-granted-content {
+    background-image: url(https://res.cloudinary.com/dgmilxzy7/image/upload/c_scale,w_700,o_25,b_rgb:07beb8/v1506735375/CodePen/ViddenPixel.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s ease-in 0.2s;
+    text-shadow: 0px 0px 20px #fff;
+}
+.login-body .submit-container .login-pending .login-granted-content .material-icons {
+    font-size: 5px;
+    position: relative;
+    left: 1.25px;
+}
+.login-body .spinner .dot1, .spinner .dot2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #68d8d6;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: dot-bounce 2s infinite ease-in-out;
+    animation: dot-bounce 2s infinite ease-in-out;
+}
+.login-body .spinner .dot2 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+@-webkit-keyframes dot-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1);
+    }
+}
+@keyframes dot-bounce {
+    0%, 100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}

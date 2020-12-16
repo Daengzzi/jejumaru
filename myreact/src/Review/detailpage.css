@@ -1,0 +1,551 @@
+@charset "UTF-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+* {
+    box-sizing: border-box;
+    font-family: 
+            'Spoqa Han Sans', 
+            'Spoqa Han Sans JP', 
+            'Sans-serif',
+            'Jeju Myeongjo',
+             serif;
+}
+
+ .section{
+    position: relative;
+    top: 180px;
+}
+
+
+
+/* 메인이미지 div 의 img  */
+.item img{
+   width: 100%;
+}
+
+
+/* .miniimg{ 
+    클래스 사라짐 
+    list-style: none;
+    margin-left: -40px;
+    margin-top: 205px;
+} 
+*/
+
+/* 미니 이미지를 담고 있는 div */
+#miniimg { display: none; }
+
+/* miniimg 안에 있는 이미지들  */
+.thumbnail{
+    width: 50%;
+    height: 130px;
+    margin-bottom: 0px;
+    
+   
+}   
+
+.thumbnail>img {
+    height: 100%;
+}
+   
+
+/* 상세설명  */
+.detail-list{
+    width: 100%;
+    
+}
+
+.detail-list div{
+   font-size: 17px;
+}
+
+.detail-list .title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.detail-list .introduction{
+   font-size: 25px;
+}
+
+.ssang { /*  "이거 "   */
+   font-size: 25px;
+}
+
+.detail-list div:nth-of-type(1){
+margin-top: 20px;
+}
+/* end 상세정보 div 끝*/
+
+
+.flqb,
+.wleh
+{
+   position: relative;
+    height: 30px;
+    margin: 59px 0;
+    text-align: center;
+    
+}
+#updateForm{
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+}
+.flqb::after,
+.wleh::after{
+    content: '';
+    display: block;
+    clear: both;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 19px;
+    z-index: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.flqb span,
+.wleh span{
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 2px 15px;
+    background-color: #fff;
+    font-size: 25px;
+    color: #333;
+    font-weight: 300;
+}
+
+/* 지도 */
+
+/****** 게시된 리뷰의 정보들 *******/
+
+/* 별점 아이콘들*/
+.fa-star, 
+.fa-star-half,
+.fa-star-half-alt{
+    color: orange;
+}
+
+.fa-map-marker-alt,
+.fa-sticky-note{
+    font-size: 30px;
+    color: orange;
+    margin-right: 10px;
+}
+
+.fa-edit{
+    margin-right: 5px;
+}
+
+/* 1.리뷰 있을때*/
+.review-wrap{
+    width: 1110px;
+    height: auto;
+    position: relative;
+    background-color: rgb(240, 240, 236);
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.star{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.star span{
+    margin-left: 5px;
+}
+
+.deletebnt,
+.rupdate,
+.updatechk,
+.updateXX
+{
+    border: none;
+    font-size: 18px;
+   float: right;
+}
+
+.username{
+    font-size: 16px; 
+}
+
+.line{
+   font-size: 20px; 
+   margin: 0 8px 0 8px;
+}
+   
+.regdate{
+    font-size: 16px;
+}
+
+.review-text{
+    margin-top: 10px;
+    font-size: 16px;
+    /* border: 1px solid red; */
+}
+
+.reviewImg img{
+    width: 25%;
+    height: 50px;
+
+} 
+
+.reviewImg{
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+.review-write{
+    
+    /* background-color: greenyellow; */
+    /* width: 1100px; */
+    height: auto;
+    /* padding: 20px; */
+    width: 100%;
+    margin-bottom: 150px;
+    margin-bottom: 180px;
+}
+
+.updatetext{
+    width: 90%;
+    border-color: lightgray;
+    height: 100px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    resize: none;
+}
+
+.write-wrap{
+    /* margin: 12px 0 29px; */
+    padding: 16px 10px 10px 18px;
+    border: 2px solid gray;
+    border-radius: 6px;
+    /* width: 1000px; */
+    height: auto;
+    width: 100%;
+    
+}
+
+.write-wrap > .username{
+    margin-left: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+
+
+.textwrtie{
+    width: 100%;
+    resize: none;
+    padding-top: 20px;
+    height: 65px;
+    margin-left: 2px;
+    
+    /* border: 0; */
+}
+
+.dhqor{
+    
+}
+
+.fa-camera{
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+.review-submit{
+    border: 0;
+    
+}
+
+/* 2. 리뷰 없을때 */
+.reviewNO{
+    border : 1px solid lightgray;
+    height: 100px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px;;
+    color: gray;
+ 
+}
+
+/* 리뷰 쓰는란 시작 */
+.Tmrl{
+    
+    margin : 30px 0 10px 0;
+    font-size: 30px;
+}
+
+/* 쓰는 란 별점 시작 */
+.blind {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(0, 0, 0, 0);
+}
+.startRadio {
+    display: block;
+    overflow: hidden;
+    height: 40px;
+    width: 200px;
+    
+}
+.startRadio:after {
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 10;
+    height: 40px;
+    background: url("data:image/png;base64,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") repeat-x 0 0;
+    background-size: contain;
+    pointer-events: none;
+    
+}
+.startRadio__box {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 20px;
+    height: 40px;
+    cursor: pointer;
+      
+}
+.startRadio__box input {
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+}
+.startRadio__box input:checked + .startRadio__img {
+    background-color: orange;
+}
+.startRadio__img {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 500px;
+    height: 40px;
+    pointer-events: none;
+}
+
+/* end 쓰는 란 별점  */
+
+
+
+.picadd input,
+.picadd button{
+   display: inline-block;
+   margin: 10px 0 10px 0;
+}  
+.picadd button{
+   background-color: orange;
+   border: none;
+}   
+
+.picadd input{
+   border: 1px solid lightgray;
+   margin-right: 10px;
+}   
+#btnAdd,
+#btnUpdate{
+   background-color : #fff;
+   color : orange;
+   border: none;
+}
+
+
+
+/* 탑버튼 */
+
+.topBtn {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    background-color: rgba(136, 133, 133, 0.397);
+    border-radius: 50%;
+    z-index: 999;
+    text-align: center;
+    margin-top: 5px;
+    bottom: 2%;
+    right: 2%;
+    cursor: pointer;
+
+    display: none;
+}
+
+.topBtn:hover {
+    border : none;
+    background-color: orange;
+}
+
+.topimg {
+    position: relative;
+    vertical-align: center;
+    top:5px;
+    width: 50%;
+}
+
+/* 푸터 */
+#footerpad{
+    position: relative;
+}
+
+
+
+.titleh2 {
+    
+    padding-top :60px;
+
+    margin : 0 30%;
+
+    /* border: 1px solid #333; */
+
+
+}
+
+.titleh2 h2{
+    font-family: 'Jeju Myeongjo', serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.hr3color {
+    border :none;
+    border:1px solid orange;
+    border-radius: 40%;
+    margin-top: 5px;
+    margin-bottom: 35px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* pc버전  */
+@media only screen and (min-width : 768px) {
+  
+    /*  메인이미지  */
+    .carousel-inner{
+        height: 100%;
+    }
+
+    .carousel-inner .item img{
+        height: 600px;
+        object-fit: cover;
+    }
+
+ /* 미니 이미지 를 담고 있는 div   */
+   #miniimg{
+        display: flex;
+       position: absolute;
+        bottom: 0;
+       
+    }
+
+
+/* 리뷰 div 안 */
+   .deletebnt,
+   .rupdate,
+   .updatechk{
+       
+   }
+  
+/* 리뷰 쓰는란  */
+
+    .review-text{
+        /* border: 1px solid red; */
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .reviewImg {
+        
+        width: 800px;
+    }
+
+    .reviewImg img{
+        width: 150px;
+        height: 150px;
+        padding-right: 10px;
+    }
+
+    .textwrtie{
+        width: 90%;
+        border-color: lightgray;
+        height: 100px;
+        margin-top: 10px;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+     
+     #byteInfo{
+        font-size: 16px;
+        margin-left: 10px;
+     }
+     .dhqor{
+        font-size: 16px;
+     }
+    .review-submit{
+        width: 50px;
+        height: 30px;
+        background-color: orange;
+        float: right;
+        margin-right: 15px;
+       font-size: 16px;
+       border-radius: 5px;
+}
+    }
+    
+    /* 쓰기란 사진추가버튼 누르면 나오는것들  */
+   .picadd input,
+   .picadd button{
+      font-size: 16.5px;
+      
+      
+   
+   
+}  
+   
+
+
+
+
+
+
+
+
+
+
+
+

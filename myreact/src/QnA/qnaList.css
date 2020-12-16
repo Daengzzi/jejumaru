@@ -1,0 +1,152 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+* {
+    box-sizing: border-box;
+    font-family:
+            'Spoqa Han Sans',
+            'Spoqa Han Sans JP',
+            'Sans-serif',
+            'Jeju Myeongjo',
+            serif;
+}
+.topBtn {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    background-color: rgba(136, 133, 133, 0.397);
+    border-radius: 50%;
+
+    text-align: center;
+    margin-top: 5px;
+    bottom: 2%;
+    right: 2%;
+    cursor: pointer;
+
+    display: none;
+}
+
+.topBtn:hover {
+    border : none;
+    background-color: orange;
+}
+
+.topimg {
+    position: relative;
+    vertical-align: center;
+    top:5px;
+    width: 50%;
+}
+
+.titleh2 {
+
+    padding-top :160px;
+
+    margin : 0 30%;
+
+    /* border: 1px solid #333; */
+
+
+}
+
+.titleh2 h2{
+    font-family: 'Jeju Myeongjo', serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.hr3color {
+    border :none;
+    border:1px solid orange;
+    border-radius: 40%;
+    margin-top: 5px;
+    margin-bottom: 35px;
+
+
+}
+
+.qandatabWrap{
+    text-align: center;
+
+}
+
+
+.tab {
+    width: 95%;
+    margin: auto;
+    border-collapse:collapse;
+    font-family: 'ChosunSg';
+}
+
+.qandatabWrap th, td{
+
+    border-bottom: 1px solid #999;
+}
+
+th {
+    /* font-size: 8px !important; */
+    padding: 13px;
+    border-top: 2px solid #999;
+
+}
+
+.daoTitle a{
+    color : rgb(71, 71, 71);
+    cursor: pointer;
+}
+
+.after {
+    color : #999999 !important;
+}
+
+td {
+    padding: 7px;
+}
+
+.writeBtn {
+    margin:1px 0 20px 10px;
+
+    float: right;
+    width:100px;
+    height: 50px;
+    box-sizing: border-box;
+
+    font-family: 'Spoqa Han Sans JP';
+
+    color: white;
+    border: none;
+    background-color: orange;
+}
+
+.writeBtn:hover {
+    background-color: rgb(224, 147, 4);
+    cursor: pointer;
+}
+
+.col-p1 {width: 8.33%;}
+.col-p2 {width: 16.66%;}
+.col-p3 {width: 25%;}
+.col-p4 {width: 33.33%;}
+.col-p5 {width: 41.66%;}
+.col-p6 {width: 50%;}
+.col-p7 {width: 58.33%;}
+.col-p8 {width: 66.66%;}
+.col-p9 {width: 75%;}
+.col-p10 {width: 83.33%;}
+.col-p11 {width: 91.66%;}
+.col-p12 {width: 100%;}
+
+
+@media only screen and (min-width : 768px){
+    /* pc version */
+
+    .titleh2 {
+        margin : 0 40%;
+    }
+
+    .qandaWrap{
+        width: 1000px;
+        margin: 0 auto;
+    }
+}

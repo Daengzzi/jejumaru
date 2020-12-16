@@ -1,0 +1,284 @@
+@media screen and (min-width: 1200px) {
+    .w-container {
+        /*max-width: 1190px;*/
+        /*margin-left: 50px;*/
+    }
+
+    .w-row {
+        margin-left: 15px;
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.intro-header{
+    height: 100vh;
+}
+.intro-header h1 {
+    position: relative;
+    z-index: 1;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-size: 99px;
+    line-height: 87px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.intro-header .without-code {
+    color: white;
+    margin: 20px 0 0 50px;
+}
+
+.intro-header h2 {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-bottom: 92px;
+    font-family: "Montserrat", sans-serif;
+    color: #262626;
+    font-size: 31px;
+    line-height: 35px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.intro-section h2 {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-bottom: 92px;
+    font-family: "Montserrat", sans-serif;
+    color: #262626;
+    font-size: 31px;
+    line-height: 35px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.intro-section h3 {
+    margin-bottom: 19px;
+    color: #262626;
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.intro-header {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 99px;
+    background-image: url(https://storage.googleapis.com/null_jeju/KakaoTalk_20201207_132132052.jpg);
+    /*background-position-y: -40px;*/
+    background-size: 100% 100%;
+}
+
+.intro-section {
+    width: 90%;
+    left: 5%;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: white;
+    color: #616161;
+    height: 100vh;
+}
+
+.main-heading-wrapper {
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: 76px;
+}
+
+.intro_object {
+    position: absolute;
+    top: 44%;
+    right: 0px;
+    display: none;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.intro_object._2 {
+    left: 0px;
+    top: 10%;
+    right: auto;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+}
+
+.w-row div {
+    float: left;
+    width: 32%;
+    height: 400px;
+    background-color: lightgray;
+
+}
+
+.w-row div:nth-of-type(2){
+    margin: 0 21px 0 21px;
+}
+
+.main-subtitle {
+    padding-bottom: 57px;
+    font-family: futura-pt, sans-serif;
+    color: black;
+    font-size: 28px;
+    line-height: 34px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    text-transform: none;
+}
+
+.w-container {
+    /*margin-left: 14%*/
+}
+
+.down-arrow {
+    display: inline-block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /*margin-right: 51px;*/
+    float: left;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: black;
+    font-size: 46px;
+    line-height: 40px;
+    text-decoration: none;
+    margin-left: 300px;
+}
+
+.feature-pill {
+    /* padding-right: 31px; */
+    /* padding-left: 31px; */
+    text-align: center;
+}
+
+.feature-icon {
+    margin-bottom: 25px;
+}
+
+.header-2 {
+    display: inline-block;
+    margin-top: 6px;
+    padding-left: 62px;
+    float: left;
+    background-image: url(http://uploads.webflow.com/5317d67d660658b254000454/534e24233392f3d069000048_arrow-left.png);
+    background-position: 0px 50%;
+    background-size: 49px;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+    font-family: "kremlin-pro-web", sans-serif;
+    color: white;
+    font-size: 29px;
+    line-height: 34px;
+    letter-spacing: 0.7px;
+}
+
+.header-1 {
+    position: absolute;
+    right: 0px;
+    bottom: -50px;
+    z-index: 2;
+    width: 586px;
+    padding-left: 56px;
+    background-image: url(http://uploads.webflow.com/5317d67d660658b254000454/534e23fb94be38d269000057_arrow-left-up.png);
+    background-position: 0% 15%;
+    background-size: 47px;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+    font-family: "kremlin-pro-web" !important;
+    color: white;
+    font-size: 29px;
+    line-height: 34px;
+    letter-spacing: 0.7px;
+}
+
+@media (max-width: 767px) {
+
+    .w-row div:nth-of-type(2){
+        margin: 0 0 0 0;
+    }
+
+    .w-row div{
+        /*margin-left: 10px;*/
+    }
+    .intro-section{
+        height: auto;
+    }
+    .intro-header{
+        height: 80vh;
+    }
+    .intro-header h1 {
+        font-size: 69px;
+        line-height: 63px;
+        text-align: left;
+        margin-top: 150px;
+    }
+    .intro-section h2 {
+        margin-left: -150px;
+        padding-bottom: 43px;
+    }
+    .intro-header {
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    .secintro-sectiontion {
+        padding: 50px 10px;
+    }
+    .main-heading-wrapper {
+        margin-top: 32px;
+        margin-bottom: 47px;
+    }
+    .feature-pill {
+        margin-bottom: 30px;
+    }
+    .setup-pill {
+        height: auto;
+    }
+    .header-1 {
+        position: static;
+        display: block;
+        margin-left: auto;
+    }
+    .w-row div:nth-of-type(1){
+    }
+
+    .w-row div{
+        float: none;
+        width: 100%;
+        /* margin-left: -70px; */
+    }
+    .w-row {
+        margin-left: -50px;
+    }
+}
+
+
+@media (max-width: 479px) {
+    .intro-header h1 {
+        font-size: 40px;
+        line-height: 43px;
+    }
+    .intro-section h3 {
+        margin-top: 0px;
+    }
+    .main-subtitle {
+        font-size: 23px;
+        line-height: 32px;
+    }
+    .w-row {
+        margin-left: -50px;
+    }
+}

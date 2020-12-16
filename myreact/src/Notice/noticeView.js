@@ -1,0 +1,106 @@
+import React, {useState, useEffect, Component} from "react";
+import {BrowserRouter, Link, Route, withRouter} from 'react-router-dom';
+import "./noticeView.css";
+import AuthService from '../services/authService';
+import $ from "jquery";
+
+class NoticeView extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            showModeratorBoard: false,
+            showAdminBoard: false,
+            currentUser: undefined,
+            isLoading: true,
+            groups: [],
+        };
+    }
+    
+    async componentDidMount() {
+        const user = AuthService.getCurrentUser();
+
+        if (user) {
+            this.setState({
+                currentUser: user,
+                showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
+                showAdminBoard: user.roles.includes("ROLE_ADMIN"),
+            });
+        }
+
+        const nno = this.props.match.params.nno;
+        const response = await fetch('/api/notice/' + nno);
+        const body = await response.json();
+        this.setState({groups: body, isLoading: false})
+        
+        $("#btn-notice_delete").on("click", ()=>{
+            deleteById();
+        });
+
+        function deleteById(){
+            let nno = $("#nno").text();
+
+            $.ajax({
+                type: "DELETE",
+                url: "/api/notice/"+nno,
+                dataType: "json"
+            }).done(function(resp){
+                alert("삭제가 완료되었습니다.");
+                window.location.href = "/jejumaru/notice/page/1";
+            }).fail(function(error){
+                // alert("실패");
+                alert(JSON.stringify(error));
+            });
+        }
+    }
+
+    render() {
+        const { currentUser, showModeratorBoard, showAdminBoard, groups, isLoading } = this.state;
+
+        if (isLoading) {
+            return <div style={{marginTop: '300px', minHeight: '500px', textAlign: "center"}}></div>;
+        }
+        
+        return (
+    <section style={{marginTop: '100px',marginBottom: '100px', position: "relative", left: "10%", width: "80%", height: '100vh'}}>
+    <div className="noticeTitle">
+        <h2><Link to="/jejumaru/notice/page/1">공지사항</Link></h2>
+        <hr className="hr3color"/>
+    </div>
+
+    <div className="noticeTable">
+        <table>
+            <tr>
+                <td className="f_td">no.<span id ="nno">{groups.nno}</span><br/>운영자</td>
+                <td style={{textAlign: 'right',  color: 'gray', fontSize: '14px'}}>{groups.ndate.split('T')[0] }<br/>조회수:{groups.nviewcnt }</td>
+            </tr>
+            <tr>
+                <th colspan="2">{groups.ntitle }</th>
+            </tr>
+            <tr>
+                <td className = "contentBox" colspan="2" style={{textAlign: 'left'}}>
+                    {groups.ncontent }
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+        {/*<button className="listBtn"*/}
+        {/*       style="margin-right:200px;"*/}
+        {/*        onclick="location.href='notice_list.do'">목록보기</button>*/}
+        {showAdminBoard && (
+            <>
+            <Link to={"/jejumaru/notice/update/"+groups.nno}><button className="updateBtn">수정하기</button></Link>
+            <button className="deleteBtn" id="btn-notice_delete">삭제하기</button>
+            </>
+        )}
+        <Link to="/jejumaru/notice/page/1"><button className="listBtn">목록보기</button></Link>
+
+</section>
+
+        );
+    }
+}
+
+
+export default withRouter(NoticeView);

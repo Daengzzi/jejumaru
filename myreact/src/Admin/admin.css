@@ -1,0 +1,135 @@
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  #admin-wrap{
+    margin-top: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    display: inline-block;
+    float: left;
+  }
+
+  #admin-nav {
+   /* width: 15%;
+    padding: 0;
+    background: #2A2D33;
+    border-right: 1px solid #E0E0E0;
+    position: fixed;*/
+    width: 300px;
+    height: 100vh;
+    line-height: 25px;
+    padding: 0;
+    background: #2A2D33;
+    border-right: 1px solid #E0E0E0;
+    display: inline-block;
+    float: left;
+  }
+
+  #admin-section {
+    width: 1000px;
+    text-align: center;
+    position: absolute;
+    display: inline;
+    top: 50px;
+    left: 400px;
+  }
+
+  #admin-nav h2 {
+    color: #60636B;
+    /* float: left; */
+    width: 100%;
+    font-size: .8em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 3px 0 2px 20px;
+    border-top: 1px solid #4D4C4C;
+    box-sizing: border-box;
+    margin: 10px 0;
+    margin-left: 30px;
+  }
+  #admin-nav ul {
+  
+  }
+  #admin-nav ul li {
+  
+  }
+  #admin-nav ul li a {
+    color: #C2C2C2;
+    font-size: .85em;
+    padding: 40px 110px;
+    /* float: left; */
+    width: 100%;
+    font-weight: 300;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  #admin-nav ul li:hover a {
+    background: #fff;
+    color: #333;
+  }
+  #admin-nav ul li:first-child:hover a {
+  background: #2A2D33;
+  color: #333;
+}
+  #admin-nav ul li.active a {
+    background: #fff;
+    color: #333;
+  }
+  #admin-nav ul li.active a i {
+    background: #fff;
+  }
+  #admin-nav i {
+    padding-right: 8px;
+    font-size: 1.3em;
+    color: #60636B;
+    width: 25px;
+    text-align: center;
+  }
+
+  #admin-nav img {
+    margin-left: -40px;
+    margin-bottom: -20px;
+    width: 130px;
+    height: 110px;
+  }
+
+  #admin-section > table {
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+  }
+
+  #admin-section > table > tr,th,td {
+    padding: 10px 15px 10px 15px;
+    border: none;
+  }
+
+  #admin-section > table > th {
+    font-weight: bold;
+  }
+
+  #admin-section > table > td {
+    font-weight: lighter;
+  }
+
+  #admin-section > table > input[type="checkbox"]{
+    transform : scale(1.5);
+  }
+
+#admin-section .btn {
+  width: 15%;
+  margin-left: 85%;
+}
